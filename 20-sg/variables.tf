@@ -19,3 +19,15 @@ variable "mysql_sg_tags" {
     Component = "mysql"
   }
 }
+
+variable "backend_sg_tags" {
+  default = {
+    Component = "backend"
+  }
+}
+
+variable "frontend_sg_tags" {
+  default = {
+    Component = "frontend"
+  }
+}
