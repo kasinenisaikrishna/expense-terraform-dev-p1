@@ -108,6 +108,15 @@ module "records" {
         module.frontend.private_ip
       ]
       allow_overwrite = true
+    },
+    {
+      name = ""
+      type = "A"
+      ttl  = 1
+      records = [
+        module.frontend.public_ip
+      ]
+      allow_overwrite = true
     }
   ]
 }
