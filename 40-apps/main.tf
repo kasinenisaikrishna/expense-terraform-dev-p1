@@ -12,7 +12,7 @@ module "mysql" {
     var.common_tags,
     var.mysql_tags,
     {
-      Name = local.resource_name
+      Name = "${local.resource_name}-mysql"
     }
   )
 }
@@ -31,7 +31,7 @@ module "backend" {
     var.common_tags,
     var.backend_tags,
     {
-      Name = local.resource_name
+      Name = "${local.resource_name}-backend"
     }
   )
 }
@@ -50,7 +50,7 @@ module "frontend" {
     var.common_tags,
     var.frontend_tags,
     {
-      Name = local.resource_name
+      Name = "${local.resource_name}-frontend"
     }
   )
 }
