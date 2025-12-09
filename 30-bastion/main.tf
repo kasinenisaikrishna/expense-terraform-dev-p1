@@ -4,7 +4,7 @@ module "bastion" {
   name = local.resource_name
 
   instance_type          = "t3.micro"
-  vpc_security_group_ids = []
+  vpc_security_group_ids = [local.bastion_sg_id]
   subnet_id              = "subnet-eddcdzz4"
 
   tags = {
