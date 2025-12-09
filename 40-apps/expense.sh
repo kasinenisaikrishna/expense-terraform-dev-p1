@@ -13,7 +13,7 @@
 sleep 20
 
 # Install needed packages
-dnf install -y git ansible
+dnf install ansible -y
 
 cd /tmp
 
