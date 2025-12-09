@@ -13,3 +13,9 @@ variable "common_tags" {
     Environment = "dev"
   }
 }
+
+variable "bastion_tags" {
+  default = {
+    Component = "bastion"
+  }
+}
