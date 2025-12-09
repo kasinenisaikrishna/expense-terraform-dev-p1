@@ -139,3 +139,12 @@ resource "aws_security_group_rule" "ansible_public" {
   cidr_blocks       = ["0.0.0.0/0"]
   security_group_id = module.ansible_sg.id
 }
+
+resource "aws_security_group_rule" "bastion_public" {
+  type              = "ingress"
+  from_port         = 22
+  to_port           = 22
+  protocol          = "tcp"
+  cidr_blocks       = ["0.0.0.0/0"]
+  security_group_id = module.bastion_sg.id
+}
